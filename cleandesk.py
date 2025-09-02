@@ -6,7 +6,7 @@ import os #can create directories
 import json
 import shutil #can move files
 import datetime
-DOWNLOAD_DIR
+SOURCE_DIR
 TARGET_DIR
 
 def wait_for_download(filepath):
