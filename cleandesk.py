@@ -68,7 +68,7 @@ def main():
     print("Hi")
     event_handler = Handler()
     observer = Observer()
-    observer.schedule(event_handler, DOWNLOAD_DIR, recursive=False)
+    observer.schedule(event_handler, SOURCE_DIR, recursive=False)
     observer.start()
     print("Starting watching for downloads")
 
