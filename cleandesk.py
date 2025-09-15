@@ -17,7 +17,7 @@ SOURCE_DIR = os.path.expanduser(
     os.getenv("SOURCE_DIR", "~/Downloads")
 )  # get the source directory from the environment variable
 TARGET_DIR = os.path.expanduser(
-    os.getenv("TARGET_DIR", "~/Desktop/Sorted")
+    os.getenv("TARGET_DIR", "~/Downloads/Sorted")
 )  # get the target directory from the environment variable
 os.makedirs(TARGET_DIR, exist_ok=True)
 
@@ -115,8 +115,6 @@ def main():
     for file in os.listdir(SOURCE_DIR):
         try:
             source_path = os.path.join(SOURCE_DIR, file)
-            if os.path.isdir(source_path):
-                continue
             month_string = (
                 get_download_month(source_path) or get_Month(source_path) or "Unknown"
             )
